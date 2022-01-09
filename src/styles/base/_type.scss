@@ -1,0 +1,161 @@
+//
+//	TYPE
+//
+//
+
+
+.font-italic, .font-style-italic { font-style: italic; }
+.font-bold, .font-weight-bold { font-weight: bold; color: $link-color; }
+.font-normal, .font-weight-normal { font-weight: normal; font-style: normal; }
+
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+
+.text-primary { color: $brand-primary; }
+.text-success { color: $brand-success; }
+.text-warning { color: $brand-warning; }
+
+
+.small { @extend %small; }
+.lead { @extend %lead; }
+.normal { font-size: 1.00em; font-weight: normal;	font-style: normal; text-transform: none; }
+
+.hide { @extend %hide; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.display-inline {	display: inline-block; }
+
+.pull-left, .alignleft { float: left; }
+.pull-right, .alignright { float: right; }
+
+img.alignleft, a.alignleft img { margin: 5px 10px 10px 0px; }
+img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
+
+.clearfix { @extend %clearfix; }
+
+.center-block { @extend %center-block; }
+
+.wp-caption {}
+.wp-caption-text {}
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.list-unstyled { @extend %list-unstyled; }
+
+.list-inline { @extend %list-inline; }
+
+.sr-only { display: none; }
+
+.display-inline-block { display: inline-block !important; }
+
+.bg-primary { background-color: lighten( $brand-primary, 60% ); }
+
+.mt-3 { @extend %mt-3; }
+.mt-2 { @extend %mt-2; }
+.mt-1 { @extend %mt-1; }
+.mt-0 { @extend %mt-0; }
+
+.mb-3 { @extend %mb-3; }
+.mb-2 { @extend %mb-2; }
+.mb-1 { @extend %mb-1; }
+.mb-0 { @extend %mb-0; }
+
+.ml-3 { @extend %ml-3; }
+.ml-2 { @extend %ml-2; }
+.ml-1 { @extend %ml-1; }
+.ml-0 { @extend %ml-0; }
+
+.mr-3 { @extend %mr-3; }
+.mr-2 { @extend %mr-2; }
+.mr-1 { @extend %mr-1; }
+.mr-0 { @extend %mr-0; }
+
+.pt-3 { @extend %pt-3; }
+.pt-2 { @extend %pt-2; }
+.pt-1 { @extend %pt-1; }
+.pt-0 { @extend %pt-0; }
+
+.pb-3 { @extend %pb-3; }
+.pb-2 { @extend %pb-2; }
+.pb-1 { @extend %pb-1; }
+.pb-0 { @extend %pb-0; }
+
+.pl-3 { @extend %pl-3; }
+.pl-2 { @extend %pl-2; }
+.pl-1 { @extend %pl-1; }
+.pl-0 { @extend %pl-0; }
+
+.pr-3 { @extend %pr-3; }
+.pr-2 { @extend %pr-2; }
+.pr-1 { @extend %pr-1; }
+.pr-0 { @extend %pr-0; }
+
+.border {  border: .1rem solid $border-color; }
+.border-bottom { border-bottom: .1rem solid $border-color; }
+.border-left { border-left: .1rem solid $border-color; }
+.border-right { border-right: .1rem solid $border-color; }
+.border-top { border-top: .1rem solid $border-color; }
+
+.bg-gray {
+	background-color: $border-color;
+}
+
+@each $name, $color in $brand-colors {
+	.border-#{$name} {
+		border-color: $color;
+	}
+	.bg-#{$name} {
+		background-color: $color;
+		color: #fff;
+	}
+}
+
+.d-flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-row {
+	font-display: row;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.d-block {
+	display: block;
+}
+
+.d-inline-block {
+	display: inline-block;
+}
+
+.d-inline {
+	display: inline;
+}
+
+.xy-center {
+	@extend %xy-center;
+}
+
+.h1 { @extend %h1; }
+.h2 { @extend %h2; }
+.h3 { @extend %h3; }
+.h4 { @extend %h4; }

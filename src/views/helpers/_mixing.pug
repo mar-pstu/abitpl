@@ -1,0 +1,25 @@
+//-
+	Набор миксинов
+
+//- прогрессбар
+mixin progress ( percent = 100 )
+	.progress
+		.progress-bar( role='progressbar' style='width: ' + percent aria-valuenow=percent aria-valuemin='0' aria-valuemax='100' )
+
+
+//- виджет сайдбара
+mixin widget ( args = {} )
+	-
+		if ( typeof( args.title ) == 'undefined' ) {
+			args.title = 'Заголовок';
+		}
+	.widget.mb-3
+		h3.widget__title.title #{args.title}
+		if block
+			block
+		else
+			p.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.

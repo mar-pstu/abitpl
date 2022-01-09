@@ -1,0 +1,68 @@
+// листалка постов / страниц
+.pager {
+
+	.item {
+		@include td ( none, none );
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		margin: 1em 0;
+		font-size: 0.85em;
+		@include min-width ( $screen-md ) {
+			width: 49%;
+		}
+	}
+
+	.next {
+		float: right;
+		margin-left: 5px;
+		flex-direction: row-reverse;
+		.title { text-align: right; }
+		.arrow {
+			border: 2px solid $brand-primary;
+			background-color: $brand-primary;
+			margin-left: 1em;
+		}
+		.arrow:before { transform: rotate( -90deg ); }
+		&:hover .arrow { background-color: lighten( $brand-primary, 5% ); }
+	}
+
+	.previous {
+		float: left;
+		padding-right: 5px;
+		flex-direction: row;
+		.title {
+			text-align: left;
+		}
+		.arrow {
+			border: 2px solid $brand-primary;
+			background-color: $brand-primary;
+			margin-right: 1em;
+		}
+		.arrow:before { transform: rotate( 90deg ); }
+		&:hover .arrow { background-color: lighten( $brand-primary, 5% ); }
+	}
+
+	.title {
+		font-variant: normal;
+		font-weight: normal;
+		margin: 0;
+	}
+
+	.arrow {
+		@extend %xy-center;
+		flex-shrink: 0;
+		width: 3em;
+		height: 3em;
+		flex-shrink: 0;
+		margin-top: .5em;
+		&:before {
+			@extend %background-icon;
+			@extend %icon;
+			content: '';
+			background-image: url( 'data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI4NC45MjkgMjg0LjkyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjg0LjkyOSAyODQuOTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+PGc+Cgk8cGF0aCBkPSJNMjgyLjA4Miw3Ni41MTFsLTE0LjI3NC0xNC4yNzNjLTEuOTAyLTEuOTA2LTQuMDkzLTIuODU2LTYuNTctMi44NTZjLTIuNDcxLDAtNC42NjEsMC45NS02LjU2MywyLjg1NkwxNDIuNDY2LDE3NC40NDEgICBMMzAuMjYyLDYyLjI0MWMtMS45MDMtMS45MDYtNC4wOTMtMi44NTYtNi41NjctMi44NTZjLTIuNDc1LDAtNC42NjUsMC45NS02LjU2NywyLjg1NkwyLjg1Niw3Ni41MTVDMC45NSw3OC40MTcsMCw4MC42MDcsMCw4My4wODIgICBjMCwyLjQ3MywwLjk1Myw0LjY2MywyLjg1Niw2LjU2NWwxMzMuMDQzLDEzMy4wNDZjMS45MDIsMS45MDMsNC4wOTMsMi44NTQsNi41NjcsMi44NTRzNC42NjEtMC45NTEsNi41NjItMi44NTRMMjgyLjA4Miw4OS42NDcgICBjMS45MDItMS45MDMsMi44NDctNC4wOTMsMi44NDctNi41NjVDMjg0LjkyOSw4MC42MDcsMjgzLjk4NCw3OC40MTcsMjgyLjA4Miw3Ni41MTF6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+CjwvZz48L2c+IDwvc3ZnPg==' );
+		}
+	}
+
+}

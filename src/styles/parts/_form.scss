@@ -1,0 +1,89 @@
+// формы по аналоги с bootstrap
+form {
+
+	label {
+		display: block;
+		font-weight: bold;
+		margin-top: 1rem;
+	}
+
+	select,
+	textarea,
+	input[ type="tel" ],
+	input[ type="text" ],
+	input[ type="number" ],
+	input[ type="email" ],
+	input[ type="password" ] {
+		@extend .mt-1;
+		@extend .mb-1;
+		border-radius: $border-radius;
+		background-color: #fff;
+		padding: .5rem 1rem;
+		display: block;
+		border: .1rem solid $text-color;
+		width: 100%;
+		box-sizing: border-box;
+		outline: none;
+		color: $text-color;
+		line-height: $line-height-base;
+	}
+
+	select {
+		@extend %icon-arrow;
+		appearance: none;
+		background-repeat: no-repeat;
+		background-size: 1rem 1rem;
+		background-position: 98% 50%;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	select.control-lg,
+	textarea.control-lg,
+	input[ type="tel" ].control-lg,
+	input[ type="number" ].control-lg,
+	input[ type="text" ].control-lg,
+	input[ type="email" ].control-lg,
+	input[ type="password" ].control-lg {
+		@extend %button-large;
+		padding: .75rem 1rem;
+		border-width: 2px;
+	}
+
+	[ type="submit" ]:not( .searchsubmit ) {
+		@extend %button;
+		@extend %button-primary;
+	}
+
+	[ type="submit" ]:not( .searchsubmit ).control-lg {
+		@extend %button-large;
+	}
+
+	&.searchform {
+		position: relative;
+		.form-control {
+			margin: 0;
+			padding-right: 2.5rem;
+		}
+		.searchsubmit {
+			@extend %background-icon;
+			position: absolute;
+			display: block;
+			border: none;
+			background-image: url( 'data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTYuOTY2IDU2Ljk2NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTYuOTY2IDU2Ljk2NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cGF0aCBkPSJNNTUuMTQ2LDUxLjg4N0w0MS41ODgsMzcuNzg2YzMuNDg2LTQuMTQ0LDUuMzk2LTkuMzU4LDUuMzk2LTE0Ljc4NmMwLTEyLjY4Mi0xMC4zMTgtMjMtMjMtMjNzLTIzLDEwLjMxOC0yMywyMyAgczEwLjMxOCwyMywyMywyM2M0Ljc2MSwwLDkuMjk4LTEuNDM2LDEzLjE3Ny00LjE2MmwxMy42NjEsMTQuMjA4YzAuNTcxLDAuNTkzLDEuMzM5LDAuOTIsMi4xNjIsMC45MiAgYzAuNzc5LDAsMS41MTgtMC4yOTcsMi4wNzktMC44MzdDNTYuMjU1LDU0Ljk4Miw1Ni4yOTMsNTMuMDgsNTUuMTQ2LDUxLjg4N3ogTTIzLjk4NCw2YzkuMzc0LDAsMTcsNy42MjYsMTcsMTdzLTcuNjI2LDE3LTE3LDE3ICBzLTE3LTcuNjI2LTE3LTE3UzE0LjYxLDYsMjMuOTg0LDZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMwMDAwMDAiPjwvcGF0aD48L2c+IDwvc3ZnPg==' );
+			background-color: transparent;
+			width: 2.5rem;
+			height: 2.5rem;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			background-size: 75%;
+			background-position: center center;
+			border: .1rem solid transparent;
+		}
+	}
+
+}

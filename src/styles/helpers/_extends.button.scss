@@ -1,0 +1,45 @@
+%button {
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	border: 2px solid;
+	padding: .75rem;
+	border-radius: $border-radius;
+	color: #fff;
+	transition: background-color .5s, border-color .5s;
+	min-width: 8rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+@each $name, $color in $brand-colors {
+	%button-#{$name} {
+		background-color: $color;
+		border-color: $color;
+	}
+	%button-#{$name}:hover {
+		background-color: lighten( $color, 15% );
+		border-color: lighten( $color, 15% );
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+%button-small {
+	padding: 0 1rem;
+	min-width: 4rem;
+	font-size: 85%;
+	border: 1px solid;
+}
+
+%button-large {
+	padding: .5rem 1.5rem;
+	@include min-width ( $screen-sm ) {
+		padding: 1rem 3rem;
+	}
+}
+
+%button-block {
+	display: block;
+	width: 100%;
+}

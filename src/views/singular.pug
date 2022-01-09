@@ -1,0 +1,14 @@
+extend layout/_index
+
+
+block variables
+	- page.type = 'post singler';
+	- page.title = 'Обо мне';
+
+
+block main
+	.container
+		h1 #{page.title}
+		include parts/_breadcrumbs
+		include parts/_content
+		include parts/_pager

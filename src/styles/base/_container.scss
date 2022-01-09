@@ -1,0 +1,31 @@
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: $container-max-width;
+	padding-right: $container-gutter-width;
+	padding-left: $container-gutter-width;
+}
+
+
+.container-fluid {
+	width: 100%;
+	padding-right: $container-gutter-width;
+	padding-left: $container-gutter-width;
+}
+
+
+@each $breakpoint in $container-breakpoints {
+
+	$name: nth( $breakpoint, 1 );
+	$size: nth( $breakpoint, 2 );
+	$container: nth( $breakpoint, 3 );
+	
+	@media only screen and ( min-width: $size ) {
+
+		.container {
+			width: $container;
+		}
+	
+	}
+}

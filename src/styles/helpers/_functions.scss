@@ -1,0 +1,10 @@
+//
+//	Функции
+//
+//
+
+
+
+@function  line-height( $fz, $lh: $line-height-base ) {
+  @return floor( $fz * $lh );
+}

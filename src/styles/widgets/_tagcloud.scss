@@ -1,0 +1,18 @@
+
+.tagcloud {
+	.tag-cloud-link {
+		font-size: 85%;
+		display: inline-block;
+		margin: 0.1em 0.1em 0.1em 0;
+		box-shadow: 0 0 0.3em rgba( 0, 0, 0, 0.3 ) inset;
+		padding: 0 1em;
+		background-color: transparent;
+		transition: color 200ms, background-color 200ms, box-shadow 200ms;
+		&:hover {
+			text-decoration: none;
+			box-shadow: none;
+			background-color: $brand-primary;
+			color: #fff;
+		}
+	}
+}

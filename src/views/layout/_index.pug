@@ -1,0 +1,33 @@
+include ../helpers/_variables
+include ../helpers/_mixing
+block variables
+	- page.type = 'page';
+doctype html
+html( lang="ru" )
+	include ../parts/_head
+	block head
+	block body
+		body( class=page.type )
+
+			block wrapper
+				.wrapper#wrapper
+					.wrapper__item.wrapper__item--mobilenav#mobilenav.mobilenav
+						block mobilenav
+							include ../parts/_mobilenav
+					.wrapper__item.wrapper__item--firstscreen#firstscreen.firstscreen
+						block firstscreen
+							header#header.header
+								block header
+									include ../parts/_header
+					main.wrapper__item.wrapper__item--main.main#main
+						block main
+							.container
+								include ../parts/_content
+					aside.wrapper__item.wrapper__item--aside.aside#aside
+						block aside
+							include ../parts/_aside
+					footer.wrapper__item.wrapper__item--footer.footer#footer
+						block footer
+							include ../parts/_footer
+					block enqueue
+						include ../parts/_enqueue

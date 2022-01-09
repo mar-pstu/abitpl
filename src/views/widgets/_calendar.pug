@@ -1,0 +1,52 @@
+#calendar_wrap.calendar_wrap: table#wp-calendar
+	caption Январь 2018
+	thead: tr
+		th(scope="col", title="Понедельник") Пн
+		th(scope="col", title="Вторник") Вт
+		th(scope="col", title="Среда") Ср
+		th(scope="col", title="Четверг") Чт
+		th(scope="col", title="Пятница") Пт
+		th(scope="col", title="Суббота") Сб
+		th(scope="col", title="Воскресенье") Вс
+	tbody
+		tr
+			td 1
+			td 2
+			td 3
+			td 4
+			td 5
+			td 6
+			td 7
+		tr
+			td 8
+			td 9
+			td 10
+			td 11
+			td 12
+			td 13
+			td 14
+		tr
+			td 15
+			td#today: a(href="http://events.edu/2018/01/16/", aria-label="Записи, опубликованные 16.01.2018") 16
+			td 17
+			td 18
+			td 19
+			td: a( href="#" ) 20
+			td 21
+		tr
+			td 22
+			td 23
+			td 24
+			td 25
+			td 26
+			td 27
+			td 28
+		tr
+			td 29
+			td 30
+			td 31
+			td.pad(colspan="4") &nbsp;
+	tfoot: tr
+		td#prev.pad(colspan="3") &nbsp;
+		td(class="pad") &nbsp;
+		td#next.pad(colspan="3") &nbsp;

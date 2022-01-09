@@ -1,0 +1,31 @@
+
+.calendar_wrap {
+	table {
+		width: 100%;
+		text-align: center;
+		line-height: 200%;
+	}
+	td {
+		padding: 0;
+	}
+	#today {
+		background-color: $brand-primary;
+		color: #fff;
+	}
+	#today a {
+		color: #fff;
+		background-color: transparent;
+	}
+	a {
+		display: block;
+		width: inherit;
+		height: inherit;
+		background-color: lighten( $brand-primary, 35% );
+		transition: color 200ms, background-color 200ms;
+	}
+	a:hover {
+		text-decoration: none;
+		background-color: $brand-primary;
+		color: #fff;
+	}
+}
