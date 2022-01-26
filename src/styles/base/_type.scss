@@ -8,9 +8,9 @@
 .font-bold, .font-weight-bold { font-weight: bold; color: $link-color; }
 .font-normal, .font-weight-normal { font-weight: normal; font-style: normal; }
 
-.text-lowercase      { text-transform: lowercase; }
-.text-uppercase      { text-transform: uppercase; }
-.text-capitalize     { text-transform: capitalize; }
+.tt-lowercase      { text-transform: lowercase; }
+.tt-uppercase      { text-transform: uppercase; }
+.tt-capitalize     { text-transform: capitalize; }
 
 
 .text-primary { color: $brand-primary; }
@@ -67,21 +67,25 @@ img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
 .mt-2 { @extend %mt-2; }
 .mt-1 { @extend %mt-1; }
 .mt-0 { @extend %mt-0; }
+.mt-auto { @extend %mt-auto; }
 
 .mb-3 { @extend %mb-3; }
 .mb-2 { @extend %mb-2; }
 .mb-1 { @extend %mb-1; }
 .mb-0 { @extend %mb-0; }
+.mb-auto { @extend %mb-auto; }
 
 .ml-3 { @extend %ml-3; }
 .ml-2 { @extend %ml-2; }
 .ml-1 { @extend %ml-1; }
 .ml-0 { @extend %ml-0; }
+.ml-auto { @extend %ml-auto; }
 
 .mr-3 { @extend %mr-3; }
 .mr-2 { @extend %mr-2; }
 .mr-1 { @extend %mr-1; }
 .mr-0 { @extend %mr-0; }
+.mr-auto { @extend %mr-auto; }
 
 .pt-3 { @extend %pt-3; }
 .pt-2 { @extend %pt-2; }
@@ -143,9 +147,7 @@ img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
 	display: block;
 }
 
-.d-inline-block {
-	display: inline-block;
-}
+.d-inline-block { @extend %d-inline-block; }
 
 .d-inline {
 	display: inline;
@@ -159,3 +161,8 @@ img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
 .h2 { @extend %h2; }
 .h3 { @extend %h3; }
 .h4 { @extend %h4; }
+
+.first { @extend %first; }
+.last { @extend %last; }
+
+.row { @extend %row; }

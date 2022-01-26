@@ -1,0 +1,27 @@
+.socials {
+
+	li + li {
+		margin-left: 1rem;
+	}
+
+	a {
+		@extend %xy-center;
+		background-color: transparentize( $brand-primary, .3 );
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+	}
+
+	a::before {
+		@extend %background-icon;
+		content: '';
+		width: 1em;
+		height: 1em;
+	}
+
+	a.facebook::before { @extend %icon-facebook; }
+	a.twitter::before { @extend %icon-twitter; }
+	a.instagram::before { @extend %icon-instagram; }
+	a.youtube::before { @extend %icon-youtube; }
+
+}

@@ -1,0 +1,60 @@
+.advantages {
+
+	.row {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: stretch;
+		flex-wrap: wrap;
+	}
+
+	.col {
+		@extend %mb-3;
+		@extend %pr-3;
+		display: flex;
+		flex-direction: column;
+		width: 33.33%;
+		box-sizing: border-box;
+	}
+
+	.entry {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		background-color: #fff;
+		transition: background-color .2s, color .2s, border-color .2s;
+		border-radius: 1.5rem;
+		padding: 2rem;
+		border: 2px solid $border-color;
+		height: 100%;
+	}
+
+	.entry:hover {
+		background-color: $brand-primary;
+		color: #fff;
+		text-decoration: none;
+		border-color: $brand-primary;
+	}
+
+	.entry:hover path {
+		fill: #fff;
+	}
+
+	.entry p {
+		@extend %mt-0;
+		@extend %mb-0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-height: $font-size-base * $line-height-base * 3;
+	}
+
+	.entry svg {
+		@extend %first;
+		@extend %mb-2;
+	}
+
+	.entry h3 {
+		@extend %mb-1;
+	}
+
+}

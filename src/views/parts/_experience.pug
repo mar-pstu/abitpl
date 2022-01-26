@@ -1,0 +1,17 @@
+//
+	Главная страница
+	Опыт
+
+mixin experience( args )
+	figure.entry
+		strong.label #{args.label}
+		span.value #{args.value}
+
+
+section.section.section--experience.experience#experience
+	h2.sr-only Опыт
+	.container
+		+experience( { label: 'Happy  Clients', value: '50+' } )
+		+experience( { label: 'Projects Completed', value: '550+' } )
+		+experience( { label: 'Dedicated Members', value: '250' } )
+		+experience( { label: 'Awards Won', value: '30+' } )

@@ -1,0 +1,78 @@
+.reviews {
+
+	.row {
+		margin-top: 3rem;
+	}
+
+	.col:first-of-type {
+		width: 60%;
+	}
+
+	.col:last-of-type {
+		width: 40%;
+	}
+
+	.thumbnail {
+		position: relative;
+		height: 100%;
+	}
+
+	.thumbnail::after {
+		@extend %icon-blockquote;
+		@extend %bgi-contain;
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: $brand-primary;
+		border-radius: 50% 50% 50% 0;
+		width: 8rem;
+		height: 8rem;
+		background-size: 50%;
+	}
+
+	.thumbnail img {
+		border-radius: 0 50% 50% 0;
+	}
+
+	.content {
+		margin-top: 5rem;
+		position: relative;
+		left: 2rem;
+		z-index: 999;
+	}
+
+	.entry {
+		background-color: #fff;
+		padding: 1rem;
+		border: 1px solid $border-color;
+	}
+
+	.entry .meta {
+		display: flex;
+		align-items: center;
+	}
+
+	.entry .excerpt {
+		@extend %lead;
+		margin-right: auto;
+	}
+
+	.entry .assessment {
+		@extend %icon-star;
+		@extend %lead;
+		position: relative;
+		height: 1em;
+		width: 5em;
+		background-repeat: repeat-x;
+		background-size: contain;
+	}
+
+	.entry .assessment .stars {
+		@extend %icon-star;
+		@extend %bgi-contain;
+		background-repeat: repeat-x;
+	}
+
+}

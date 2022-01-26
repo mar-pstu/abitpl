@@ -6,5 +6,18 @@ block variables
 	- page.title = 'Главная';
 
 
+block firstscreen
+	header#header.header
+		block header
+			include parts/_header
+			include parts/_jumbotron
+
+
 block main
-	include parts/_jumbotron
+	include parts/_partners
+	//- какой-то блок
+	include parts/_experience
+	include parts/_advantages
+	include parts/_reviews
+	include parts/_offers
+	include parts/_subscribe

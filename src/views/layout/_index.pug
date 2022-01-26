@@ -23,11 +23,12 @@ html( lang="ru" )
 						block main
 							.container
 								include ../parts/_content
-					aside.wrapper__item.wrapper__item--aside.aside#aside
-						block aside
-							include ../parts/_aside
-					footer.wrapper__item.wrapper__item--footer.footer#footer
-						block footer
-							include ../parts/_footer
+					.wrapper__item.wrapper__item--basement.basement#fbasementooter
+						aside.aside.aside#aside
+							block aside
+								include ../parts/_aside
+						footer.footer#footer
+							block footer
+								include ../parts/_footer
 					block enqueue
 						include ../parts/_enqueue

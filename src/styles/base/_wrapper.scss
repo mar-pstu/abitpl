@@ -45,6 +45,11 @@
 		flex-direction: column;
 		width: 100vw;
 		height: 100vh;
+		background-image: url( '../images/firstscreen.svg' ), linear-gradient( 90deg, desaturate( $brand-primary, 10% ), saturate( $brand-primary, 10% ) );
+		color: #fff;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: cover;
 	}
 
 	&__item--main {
@@ -55,17 +60,19 @@
 		transition: all .2s;
 	}
 
-
-	&__item--aside {
+	&__item--basement {
+		padding: 5rem 0 2.5rem 0;
 		width: 100vw;
+		background-color: darken( $brand-primary, 25% );
 		color: #fff;
+		background-image: url( '../images/basement.svg' );
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 100% 100%;
 	}
 
-	&__item--footer {
-		padding: 1.5rem 0;
-		width: 100vw;
-		background-color: $brand-primary;
-		color: #fff;
+	&__item--basement * {
+		color: inherit;
 	}
 
 

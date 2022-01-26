@@ -1,2 +1,39 @@
 //-
 	Сайдбар подвала
+
+
+mixin basement_widget( args )
+	.col.pl-3
+		+widget( args )
+			block
+
+
+.container.mb-3
+
+	.row
+
+		.col.pl-3
+			figure.ml-0.mr-0.mt-0
+				include _logo
+			include _socials
+
+
+		+basement_widget( { title: 'Short links' } )
+			ul
+				li Home
+				li Services
+				li Screenshots
+				li contact
+
+		+basement_widget( { title: 'Help link' } )
+			ul
+				li How to download
+				li How it work
+				li Video tutorial
+				li FAQ
+
+		+basement_widget( { title: 'Short links' } )
+			ul
+				li Google Play Store
+				li Apple App Store
+				li Download Directly

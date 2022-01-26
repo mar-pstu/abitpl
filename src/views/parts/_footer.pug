@@ -1,8 +1,10 @@
 //-
 	Подвал сайта
 
-.container
+.container.small
 
-	p.copyright #[strong.author #{blog.author}] #[br] #[span.title &copy; #{blog.name}], 2021
+	.row
 
-	p.developer Разработка: #[a( href='https://chomovva.ru/' ) chomovva]
+		p.col.mr-auto.copyright #[strong.author #{blog.author}] #[span.title &copy; #{blog.name}], 2021
+
+		p.col.ml-auto.developer Разработка: #[a( href='https://chomovva.ru/' ) chomovva]

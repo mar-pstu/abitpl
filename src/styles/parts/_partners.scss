@@ -1,0 +1,26 @@
+.partners {
+
+	.row {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: stretch;
+		flex-wrap: wrap;
+		flex-basis: 20%;
+	}
+
+	.entry {
+		@extend %pl-3;
+		@extend %pr-3;
+		@extend %pt-1;
+		@extend %pb-1;
+		background-color: #fff;
+		box-shadow: 1px 4px 12px rgba( 0, 0, 0, 0.08 );
+	}
+
+	.entry img {
+		max-width: 10rem;
+		max-height: 5rem;
+	}
+
+}

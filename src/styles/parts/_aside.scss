@@ -1,0 +1,22 @@
+.aside {
+
+	.custom-logo-link {
+		max-width: 7.5rem;
+		max-height: 7.5rem;
+	}
+
+	.col {
+		width: 25%;
+		box-sizing: border-box;
+	}
+
+	.widget .title {
+		text-transform: uppercase;
+	}
+
+	.socials a {
+		background-color: rgba( 255, 255, 255, .3 );
+		filter: blur( 0 );
+	}
+
+}

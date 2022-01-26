@@ -1,0 +1,25 @@
+//
+	Главная странциа
+	Партнёры
+
+
+mixin partner( args )
+	figure.entry
+		img( src=args.src alt=args.title )
+		figcaprion.sr-only #{args.title}
+
+
+section.section.section--partners.partners#partners
+	.container
+
+		h2.sr-only Партнёры
+
+		.row
+
+			+partner( { src: src.userfiles+'fedex.png', title: 'fedex' } )
+			+partner( { src: src.userfiles+'google.png', title: 'google' } )
+			+partner( { src: src.userfiles+'ola.png', title: 'ola' } )
+			+partner( { src: src.userfiles+'microsoft.png', title: 'microsoft' } )
+			+partner( { src: src.userfiles+'amazon.png', title: 'amazon' } )
+			+partner( { src: src.userfiles+'fedx.png', title: 'fedx' } )
+			+partner( { src: src.userfiles+'walmart.png', title: 'walmart' } )

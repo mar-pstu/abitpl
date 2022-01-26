@@ -1,9 +1,6 @@
 @import "helpers/variables";
 @import "helpers/functions";
 @import "helpers/mixins";
-@import "helpers/extends.titles";
-@import "helpers/extends.button";
-@import "helpers/extends.icons";
 @import "helpers/extends";
 
 
@@ -25,8 +22,16 @@
 @import "parts/pager";
 @import "parts/pagination";
 @import "parts/breadcrumbs";
+@import "parts/aside";
 @import "parts/footer";
 @import "parts/totopbutton";
+@import "parts/partners";
+@import "parts/experience";
+@import "parts/advantages";
+@import "parts/reviews";
+@import "parts/socials";
+@import "parts/logo";
+@import "parts/subscribe";
 
 
 @import "templates/404";

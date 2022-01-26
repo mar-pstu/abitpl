@@ -1,13 +1,7 @@
 //-
 	Набор миксинов
 
-//- прогрессбар
-mixin progress ( percent = 100 )
-	.progress
-		.progress-bar( role='progressbar' style='width: ' + percent aria-valuenow=percent aria-valuemin='0' aria-valuemax='100' )
 
-
-//- виджет сайдбара
 mixin widget ( args = {} )
 	-
 		if ( typeof( args.title ) == 'undefined' ) {

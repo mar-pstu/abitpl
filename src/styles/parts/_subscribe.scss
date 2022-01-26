@@ -1,0 +1,12 @@
+.subscribe {
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		border-radius: 2rem;
+		background-color: transparentize( $brand-success, .85 );
+		padding: 5rem 15em;
+		box-sizing: border-box;
+	}
+
+}

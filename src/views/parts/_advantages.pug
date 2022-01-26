@@ -1,0 +1,36 @@
+//
+	Главная страница
+	Преимущества
+
+
+mixin advantage( args )
+	.col: a.entry( href='#' )
+		h3 #{args.title}
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+		block
+
+
+section.section.section--advantages.advantages#advantages
+	.container
+
+		.row
+
+			.col.pr-3
+				h2.h3 Committed to People, Committed
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				p.text-success.text-uppercase.first Your Vision, Our Future.
+
+			+advantage( { title: 'Creative Ideas' } )
+				//- include ../../userfiles/idea.svg
+			
+			+advantage( { title: 'Beautiful Blog' } )
+				include ../../userfiles/blog.svg
+			
+			+advantage( { title: 'User Friendly' } )
+				include ../../userfiles/friendly.svg
+			
+			+advantage( { title: 'Perfect Showcase' } )
+				include ../../userfiles/perfect.svg
+
+			+advantage( { title: 'Easy to Use' } )
+				include ../../userfiles/easy.svg

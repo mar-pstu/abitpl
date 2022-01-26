@@ -106,7 +106,7 @@ gulp.task( 'minscripts', function () {
 
 
 gulp.task( 'userfiles', function () {
-	return gulp.src( './src/userfiles/**/*.{png,jpg,svg,gif}' )
+	return gulp.src( './src/userfiles/**/*.{png,jpg,svg,gif,svg}' )
 		.pipe( plumber() )
 		.pipe( cache( images() ) )
 		.pipe( gulp.dest( './examples/userfiles/' ) )
@@ -116,7 +116,7 @@ gulp.task( 'userfiles', function () {
 
 
 gulp.task( 'images', function () {
-	return gulp.src( './src/images/**/*.{png,jpg,svg,gif}' )
+	return gulp.src( './src/images/**/*.{png,jpg,svg,gif,svg}' )
 		.pipe( plumber() )
 		.pipe( cache( images() ) )
 		.pipe( gulp.dest( './images/' ) )

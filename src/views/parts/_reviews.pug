@@ -1,0 +1,38 @@
+//
+	Главная странциа
+	Отзывы
+
+
+mixin review( args )
+	article.entry
+		h3 #{args.title}
+		.meta
+			p.excerpt #{args.excerpt}
+			.assessment.ml-auto.lead
+				span.sr-only Оценка #{args.assessment}
+				span.stars( style='width: ' + args.assessment + 'em;' )
+
+		p.font-style-italic Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+section.section.section--reviews.reviews#reviews
+
+	.container
+
+		h2.text-center#reviews-title User’s Review
+		p.text-center#reviews-excerpt Collaborate over projects with your team and clients optimised for mobile and tablet don't let slow
+
+		.row
+
+			.col
+				p.h3 What People Say About Us
+				.content#reviews-content
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
+
+			.col
+				.thumbnail
+					img( src=src.userfiles+'author.jpg' alt='Автор' )
