@@ -54,7 +54,7 @@ img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
 }
 
 .list-unstyled { @extend %list-unstyled; }
-
+.list-checked { @extend %list-checked; }
 .list-inline { @extend %list-inline; }
 
 .sr-only { display: none; }
@@ -129,6 +129,11 @@ img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
 
 .d-flex {
 	display: flex;
+}
+
+.d-flex.center {
+	justify-content: center;
+	align-items: center;
 }
 
 .flex-wrap {

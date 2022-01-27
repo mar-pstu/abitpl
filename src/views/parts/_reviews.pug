@@ -26,12 +26,15 @@ section.section.section--reviews.reviews#reviews
 
 			.col
 				p.h3 What People Say About Us
-				.content#reviews-content
+				.slider-content
 					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
 					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
 					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
 					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
 					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
+				.d-flex.center.mt-3
+						button.slider-arrow.prev#reviews-next #[span.sr-only Предыдущий слайд]
+						button.slider-arrow.next#reviews-prev #[span.sr-only Следующий слайд]
 
 			.col
 				.thumbnail

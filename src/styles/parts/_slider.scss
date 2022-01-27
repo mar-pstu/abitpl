@@ -1,0 +1,33 @@
+.slider-arrow {
+	@extend %xy-center;
+	background-color: $brand-success;
+	margin: .25rem;
+	border: none;
+	width: 3rem;
+	height: 3rem;
+}
+
+.slider-arrow::before {
+	@extend %background-icon;
+	@extend %icon-arrow;
+	content: '';
+	width: 1em;
+	height: 1em;
+	transform-origin: center center;
+}
+
+.slider-arrow.prev {
+	border-radius: 50% 50% 0 50%;
+}
+
+.slider-arrow.prev::before {
+	transform: rotate( 90deg );
+}
+
+.slider-arrow.next {
+	border-radius: 50% 50% 50% 0;
+}
+
+.slider-arrow.next::before {
+	transform: rotate( -90deg );
+}

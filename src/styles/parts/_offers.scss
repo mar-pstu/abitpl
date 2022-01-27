@@ -1,0 +1,125 @@
+.offers {
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 50%;
+		background-color: transparentize( $brand-primary, .85 );
+		z-index: -1;
+	}
+
+	.tabs .heading {
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.tabs .heading a {
+		@extend %lead;
+		padding: 1rem 2rem;
+		position: relative;
+		// border: 1rem solid #fff;
+		box-sizing: border-box;
+		color: $brand-success;
+		border-radius: $border-radius;
+		background-color: transparentize( $brand-success, .85 );
+		margin: 1rem 0 1rem 1rem;
+	}
+
+	.tabs .heading a::before {
+		@extend %bgi;
+		content: '';
+		background-color: #fff;
+		margin: -1rem;
+		z-index: -1;
+	}
+
+	.tabs .heading a:first-of-type::before {
+		border-radius: $border-radius 0 0 $border-radius;
+	}
+
+	.tabs .heading a:last-of-type::before {
+		border-radius: 0 $border-radius $border-radius 0;
+	}
+
+	.tabs .heading a:last-of-type {
+		margin-right: 1rem;
+	}
+
+	.tabs .heading a:hover,
+	.tabs .heading a:focus {
+		text-decoration: none;
+	}
+
+	.tabs .heading a.active {
+		color: #fff;
+		background-color: $brand-success;
+	}
+
+	.slider-content {
+		max-width: 60rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.slider-content .slick-slide {
+		margin: 2rem 1rem;
+	}
+
+	.entry {
+		border-radius: $border-radius;
+		border: .1rem solid $border-color;
+		background-color: #fff;
+		padding: 0 2.5rem 2.5rem 2.5rem;
+		text-align: center;
+		position: relative;
+	}
+
+	.entry .icon {
+		min-width: 5rem;
+		min-height: 5rem;
+		margin-bottom: 1rem;
+	}
+
+	.entry .icon path {
+		fill: $brand-primary;
+	}
+
+	.entry .icon img {
+		object-fit: cover;
+		object-position: center center;
+		display: none;
+	}
+
+	.entry .title {
+		@extend %h3;
+	}
+
+	.entry .price {
+		@extend %h1;
+		color: $brand-primary;
+	}
+
+	.entry .excerpt {
+		font-weight: bold;
+	}
+
+	.entry .description {
+		text-align: initial;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+
+	.entry .permalink {
+		@extend %button;
+		@extend %button-success;
+		display: block;
+		margin-top: 2.5rem;
+	}
+
+}

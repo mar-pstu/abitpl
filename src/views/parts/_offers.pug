@@ -3,38 +3,54 @@
 
 
 mixin offer( args )
-	article
-		h4 #{args.title}
-		strong.price #{args.price}
-		p #{args.excerpt}
-		block
+	article.entry
+		.icon
+			include ../../images/polygon.svg
+			img( src=args.icon alt=args.title )
+		h4.title #{args.title}
+		p.price #{args.price}
+		.excerpt #{args.excerpt}
+		.description
+			ul.list-checked
+				li 256 GB SSD STORE
+				li FULL UI KIT DOWNLOAD
+				li PUBLIC API
+				li FULL UI PACK DOWNLOAD
+				li 24/7 SUPPORT
 		a.permalink( href='#' ) Install Pack
 
 
 section.section.section--offers.offers#offers
 	.container
 
-		h2 Without Extra Charge Choose Your Best Plan
+		h2.text-center.mb-3 Without Extra Charge Choose Your Best Plan
 
 		.tabs
 
 			.heading
 				a.button.active( role='button' href='#monthly' ) Monthly
-				a.button( role='button' href='#' ) Yearly
+				a.button( role='button' href='#yearly' ) Yearly
 
-			.content#monthly
+			.content
 
-				h3.sr-only Monthly
+				#monthly
+					h3.sr-only Monthly
+					.slider-content#monthly-slider
+						+offer( { title: 'Standard', price: '$29', excerpt: 'Monthly pack', icon: src.userfiles+'fire.png' } )
+						+offer( { title: 'Standard', price: '$39', excerpt: 'Monthly pack', icon: src.userfiles+'heart.png' } )
+						+offer( { title: 'Standard', price: '$29', excerpt: 'Monthly pack', icon: src.userfiles+'fire.png' } )
+						+offer( { title: 'Standard', price: '$39', excerpt: 'Monthly pack', icon: src.userfiles+'heart.png' } )
+					.d-flex.center
+						button.slider-arrow.prev#monthly-slider-next #[span.sr-only Предыдущий слайд]
+						button.slider-arrow.next#monthly-slider-prev #[span.sr-only Следующий слайд]
 
-				+offer( { title: 'Standard', price: '$29', excerpt: 'monthly pack', icon: src.userfiles+'.png' } )
-				+offer( { title: 'Standard', price: '$39', excerpt: 'monthly pack', icon: src.userfiles+'.png' } )
-
-
-
-
-			.content#yearly
-
-				h3.sr-only Yearly
-
-				+offer( { title: 'Standard', price: '$29', excerpt: 'monthly pack', icon: src.userfiles+'.png' } )
-				+offer( { title: 'Standard', price: '$39', excerpt: 'monthly pack', icon: src.userfiles+'.png' } )
+				#yearly.hide
+					h3.sr-only Yearly
+					.slider-content#yearly-slider
+						+offer( { title: 'Standard', price: '$29', excerpt: 'Yearly pack', icon: src.userfiles+'fire.png' } )
+						+offer( { title: 'Standard', price: '$39', excerpt: 'Yearly pack', icon: src.userfiles+'heart.png' } )
+						+offer( { title: 'Standard', price: '$29', excerpt: 'Yearly pack', icon: src.userfiles+'fire.png' } )
+						+offer( { title: 'Standard', price: '$39', excerpt: 'Yearly pack', icon: src.userfiles+'heart.png' } )
+					.d-flex.center
+						button.slider-arrow.prev#yearly-slider-next #[span.sr-only Предыдущий слайд]
+						button.slider-arrow.next#yearly-slider-prev #[span.sr-only Следующий слайд]
