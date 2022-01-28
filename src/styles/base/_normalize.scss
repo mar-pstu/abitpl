@@ -470,6 +470,8 @@ optgroup {
 //
 
 table {
+	@extend %mt-1;
+	@extend %mb-1;
 	border-collapse: collapse;
 	border-spacing: 0;
 	border: none;
@@ -486,11 +488,10 @@ td {
 }
 
 th {
-	border-top: 1px solid $text-color;
-	border-bottom: 1px solid $text-color;
+	border-top: 1px solid $brand-primary;
+	border-bottom: 1px solid $brand-primary;
 	padding: 1em .25em;
 	text-align: left;
-	color: $link-color;
 }
 
 

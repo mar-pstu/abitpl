@@ -6,5 +6,37 @@ block variables
 	- page.title = 'Блог';
 
 
+mixin archive_entry( args )
+	article.entry: .inner
+		a.thumbnail( href='#' )
+			img.wp-post-thumbnail( src=args.thumbnail alt='Заголовок' )
+			time.small( datetime="2001-05-15 19:00" ) 15 мая 2021
+		h3.title: a( href='#' ) #{args.title}
+		ul.tags
+			li: a( href='#' ) html
+			li: a( href='#' ) Java
+			li: a( href='#' ) js
+			li: a( href='#' ) OpenCart
+			li: a( href='#' ) WordPress
+		block
+		a.permalink( href="#" ) Подробнее	
+
+
 block main
-	
+	section.section
+		.container
+			
+			h1 #{page.title}
+			include parts/_breadcrumbs
+
+			.row
+				+archive_entry( { title: 'Что такое тестирование и откуда оно появилось?', thumbnail: src.userfiles+'entry01.jpg' } )
+					p Существует несколько вариантов понимания тестирования. Тестирование – основной принцип: «нужно искать проблемы». Одно из первых определений тестирования было написано в 1975г., авторы Goodenough, Gerhart.«Целью тестирования — является определения того содержит ли программа ошибки» Похожее определение есть в книге Kaner(a) в 99г. Синия книга))«Целью тестирования — является поиск в ней проблем» Из стандарта SWEBOK (Software Engineering …
+				+archive_entry( { title: 'Что такое тестирование и откуда оно появилось?', thumbnail: src.userfiles+'entry02.jpg' } )
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				+archive_entry( { title: 'Что такое тестирование и откуда оно появилось?', thumbnail: src.userfiles+'entry03.jpg' } )
+					p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				+archive_entry( { title: 'Что такое тестирование и откуда оно появилось?', thumbnail: src.userfiles+'entry04.jpg' } )
+					p Существует несколько вариантов понимания тестирования. Тестирование – основной принцип: «нужно искать проблемы». Одно из первых определений тестирования было написано в 1975г., авторы Goodenough, Gerhart.«Целью тестирования — является определения того содержит ли программа ошибки» Похожее определение есть в книге Kaner(a) в 99г. Синия книга))«Целью тестирования — является поиск в ней проблем» Из стандарта SWEBOK (Software Engineering …
+
+			include parts/_pagination

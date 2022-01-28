@@ -9,8 +9,8 @@
 	}
 
 	.col {
-		@extend %mb-3;
-		@extend %pr-3;
+		@extend %mb-1;
+		@extend %pr-1;
 		display: flex;
 		flex-direction: column;
 		width: 33.33%;
@@ -24,8 +24,8 @@
 		background-color: #fff;
 		transition: background-color .2s, color .2s, border-color .2s;
 		border-radius: 1.5rem;
-		padding: 2rem;
-		border: 2px solid $border-color;
+		padding: $container-outer-margin;
+		border: .2rem solid $border-color;
 		height: 100%;
 	}
 
@@ -50,7 +50,7 @@
 
 	.entry svg {
 		@extend %first;
-		@extend %mb-2;
+		@extend %mb-1;
 	}
 
 	.entry h3 {

@@ -1,8 +1,9 @@
 .aside {
 
 	.custom-logo-link {
-		max-width: 7.5rem;
-		max-height: 7.5rem;
+		max-width: $container-outer-margin * 5;
+		max-height: $container-outer-margin * 5;
+		display: block;
 	}
 
 	.col {

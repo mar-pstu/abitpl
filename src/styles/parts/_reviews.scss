@@ -1,7 +1,7 @@
 .reviews {
 
 	.row {
-		margin-top: 3rem;
+		@extend %mt-2;
 	}
 
 	.col:first-of-type {
@@ -36,17 +36,20 @@
 		border-radius: 0 50% 50% 0;
 	}
 
-	.content {
-		margin-top: 5rem;
+	.slider-content {
 		position: relative;
-		left: 2rem;
+		width: 110%;
 		z-index: 999;
+	}
+
+	.slider-content .slick-slide {
+		margin-right: $container-outer-margin;
 	}
 
 	.entry {
 		background-color: #fff;
-		padding: 1rem;
-		border: 1px solid $border-color;
+		padding: $container-outer-margin;
+		border: .1rem solid $border-color;
 	}
 
 	.entry .meta {

@@ -14,7 +14,6 @@
 @import "widgets/calendar";
 
 
-@import "parts/mobilenav";
 @import "parts/burger";
 @import "parts/header";
 @import "parts/form";
@@ -34,11 +33,14 @@
 @import "parts/subscribe";
 @import "parts/offers";
 @import "parts/slider";
+@import "parts/about";
+@import "parts/jumbotron";
 
 
 @import "templates/404";
 @import "templates/singular";
 @import "templates/search";
+@import "templates/archive";
 
 
 @import "wp/customizer";

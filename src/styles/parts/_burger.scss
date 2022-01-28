@@ -1,6 +1,6 @@
 .burger {
 
-	height: 2rem;
+	height: $container-outer-margin;
 	background-color: transparent;
 	border: none;
 	position: relative;
@@ -9,11 +9,11 @@
 	.bar {
 		background-color: $brand-default;
 		border-radius: .2rem;
-		width: 2rem;
-		height: 1px;
+		width: $container-outer-margin;
+		height: .1rem;
 		display: block;
-		margin: .5rem 0;
-		width: 2rem;
+		margin: $container-outer-margin / 2 0;
+		width: $container-outer-margin;
 	}
 
 }

@@ -16,35 +16,11 @@
 	position: relative;
 	overflow: hidden;
 
-	&__item--mobilenav {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: $brand-primary;
-		color: #fff;
-		z-index: 9999;
-		padding: 5rem 2.5rem;
-		visibility: hidden;
-		opacity: 0;
-		transition: opacity .2s, visibility .2s, transform .2s;
-		transform-origin: top right;
-		transform: scale( .8 ) translate( 25%, -25% );
-		overflow-y: scroll;
-	}
-
-	&__item--mobilenav.active {
-		visibility: visible;
-		opacity: 1;
-		transform: scale( 1 ) translate( 0, 0 );
-	}
-
 	&__item--firstscreen {
 		display: flex;
 		flex-direction: column;
 		width: 100vw;
-		height: 100vh;
+		// height: 100vh;
 		background-image: url( '../images/firstscreen.svg' ), linear-gradient( 90deg, desaturate( $brand-primary, 10% ), saturate( $brand-primary, 10% ) );
 		color: #fff;
 		background-repeat: no-repeat;

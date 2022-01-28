@@ -3,6 +3,33 @@
 
 .error404 {
 
-	//-
+	#main .section .container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		border-radius: 2rem;
+		background-color: transparentize( $brand-success, .85 );
+		padding: 5rem 15em;
+		box-sizing: border-box;
+	}
+
+	#main .section .description {
+		text-align: center;
+	}
+
+	#main .section .permalink {
+		@extend %button;
+		@extend %button-success;
+		@extend %mt-3;
+	}
+
+	#main .section .permalink::after {
+		@extend %icon;
+		@extend %icon-home;
+		@extend %background-icon;
+		content: '';
+		margin-left: $container-outer-margin / 2;
+	}
 
 }

@@ -23,7 +23,6 @@
 		@extend %lead;
 		padding: 1rem 2rem;
 		position: relative;
-		// border: 1rem solid #fff;
 		box-sizing: border-box;
 		color: $brand-success;
 		border-radius: $border-radius;
@@ -84,6 +83,7 @@
 		min-width: 5rem;
 		min-height: 5rem;
 		margin-bottom: 1rem;
+		position: relative;
 	}
 
 	.entry .icon path {
@@ -93,7 +93,13 @@
 	.entry .icon img {
 		object-fit: cover;
 		object-position: center center;
-		display: none;
+		display: block;
+		width: 2.5rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform-origin: center center;
+		transform: translate( -50%, -50% );
 	}
 
 	.entry .title {

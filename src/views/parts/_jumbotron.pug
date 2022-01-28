@@ -3,12 +3,18 @@
 	Первый экран
 
 
-section.section.section--jumbotron#jumbotron
+section.section.section--jumbotron.jumbotron#jumbotron
 	.container
-		.content
-			h2.h1 Runs faster
-			p.h2 Costs less and never breaks.
-			hr
-			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sapien lectus sit tristique rhoncus, nisi, malesuada. Tellus consequat
-		.thumbnail
-			img.alignright( src=src.userfiles+'jumbotron.png' alt="" )
+
+		.row
+
+			.col.content
+				h2.h1 Runs faster
+				p.h2 Costs less and never breaks.
+				p.first.tt-uppercase.font-weight-bold Inspiration Technology.
+				hr
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sapien lectus sit tristique rhoncus, nisi, malesuada. Tellus consequat
+				a.permalink( href='#' ) Get Started
+			
+			.col.thumbnail
+				img( src=src.userfiles+'jumbotron.png' alt='' )

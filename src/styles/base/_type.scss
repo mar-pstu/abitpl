@@ -5,7 +5,7 @@
 
 
 .font-italic, .font-style-italic { font-style: italic; }
-.font-bold, .font-weight-bold { font-weight: bold; color: $link-color; }
+.font-bold, .font-weight-bold { font-weight: bold; }
 .font-normal, .font-weight-normal { font-weight: normal; font-style: normal; }
 
 .tt-lowercase      { text-transform: lowercase; }
@@ -57,7 +57,7 @@ img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
 .list-checked { @extend %list-checked; }
 .list-inline { @extend %list-inline; }
 
-.sr-only { display: none; }
+.sr-only { @extend %sr-only; }
 
 .display-inline-block { display: inline-block !important; }
 

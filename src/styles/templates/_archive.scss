@@ -1,0 +1,94 @@
+.archive {
+
+	#main .section .row {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: stretch;
+		flex-wrap: wrap;
+		flex-basis: 50%;
+		margin-left: -$container-outer-margin;
+		margin-right: -$container-outer-margin;
+	}
+
+	.entry {
+		margin-top: $container-outer-margin;
+		margin-bottom: $container-outer-margin;
+		padding-left: $container-outer-margin;
+		padding-right: $container-outer-margin;
+		width: 100%;
+		overflow: hidden;
+		box-sizing: border-box;
+		@include min-width( $screen-lg ) {
+			width: 50%;
+		}
+	}
+
+	.entry .title a {
+		text-decoration: none;
+	}
+
+	.entry .inner {
+		padding: $container-outer-margin;
+		background-color: #fff;
+		border: .1rem solid $border-color;
+		border-radius: $border-radius;
+	}
+
+	.entry .thumbnail {
+		@extend .mb-1;
+		display: block;
+		position: relative;
+		min-height: 1em * $line-height-base;
+		border-radius: $border-radius;
+		overflow: hidden;
+		height: 10rem;
+		background-color: $border-color;
+	}
+
+	.entry .thumbnail time {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 0 $container-outer-margin / 2;
+		color: #fff;
+		background-color: $brand-primary;
+		border-radius: $border-radius;
+	}
+
+	.entry .wp-post-thumbnail {
+		display: block;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	.entry p {
+		@extend %mb-1;
+	}
+
+	.entry .tags {
+		@extend %small;
+		@extend %list-inline;
+	}
+
+	.entry .tags li::before {
+		content: '#';
+		font-weight: bold;
+	}
+
+	.entry .permalink {
+		@extend %button;
+		@extend %button-success;
+	}
+
+	.entry .permalink::after {
+		@extend %background-icon;
+		@extend %icon;
+		@extend %icon-arrow;
+		content: '';
+		transform-origin: center center;
+		transform: rotate( 270deg );
+	}
+
+}

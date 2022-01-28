@@ -3,15 +3,15 @@
 	margin-right: auto;
 	margin-left: auto;
 	max-width: $container-max-width;
-	padding-right: $container-gutter-width;
-	padding-left: $container-gutter-width;
+	padding-right: $container-outer-margin;
+	padding-left: $container-outer-margin;
 }
 
 
 .container-fluid {
 	width: 100%;
-	padding-right: $container-gutter-width;
-	padding-left: $container-gutter-width;
+	padding-right: $container-outer-margin;
+	padding-left: $container-outer-margin;
 }
 
 

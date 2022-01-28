@@ -1,9 +1,14 @@
 .header {
 
 	.container {
+		@extend %mt-2;
+		@extend %mb-2;
 		display: flex;
-		margin-top: 3rem;
-		margin-bottom: 3rem;
+		align-items: center;
+	}
+
+	.custom-logo-link + .menu {
+		margin-left: auto;
 	}
 
 	.menu {
@@ -13,12 +18,36 @@
 	}
 
 	.menu li {
-		margin: 0 .5rem;
+		margin: 0 1rem;
 	}
 
-	.action {
-		@extend %button;
-		@extend %button-success;
+	.menu a {
+		@extend %lead;
+		color: #fff;
+	}
+
+	.menu a:hover,
+	.menu a:focus {
+		text-decoration: none;
+	}
+
+	.menu a::after,
+	.menu a::after {
+		content: '';
+		display: block;
+		height: .2rem;
+		background-color: transparent;
+		transition: background-color .2s;
+	}
+
+	.menu li.current-menu-item a::after,
+	.menu a:hover::after,
+	.menu a:focus::after {
+		background-color: #fff;
+	}
+
+	.burger {
+		display: none;
 	}
 
 }

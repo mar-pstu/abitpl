@@ -1,8 +1,7 @@
 .section {
 
+	@extend %pt-3;
+	@extend %pb-3;
 	position: relative;
-	padding-top: 5rem;
-	padding-bottom: 5rem;
-	box-sizing: border-box;
 
 }
