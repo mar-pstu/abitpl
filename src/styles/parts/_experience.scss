@@ -21,7 +21,6 @@
 		justify-content: center;
 		align-items: stretch;
 		flex-wrap: wrap;
-		flex-basis: 20%;
 	}
 
 	.entry {
@@ -29,9 +28,16 @@
 		@extend %pr-1;
 		@extend %pt-1;
 		@extend %pb-1;
+		@extend %ml-0;
+		@extend %mr-0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 50%;
+		text-align: center;
+		@include min-width( $screen-lg ) {
+			width: 25%;
+		}
 	}
 
 	.entry .label {

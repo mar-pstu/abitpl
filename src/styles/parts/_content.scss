@@ -1,8 +1,34 @@
 .content {
 	
 	table {
-		margin-top: $container-outer-margin / 2;
-		margin-bottom: $container-outer-margin / 2;
+		@extend %mt-1;
+		@extend %mb-1;
+		border-spacing: 0;
+		border: none;
+		width: 100%;
+		border: 1px solid $border-color;
+		border-radius: $border-radius;
+		overflow: hidden;
+	}
+
+	table td + td {
+		border-left: .1rem solid $border-color;
+	}
+
+	table tr + tr td {
+		border-top: .1rem solid $border-color;
+	}
+
+	td {
+		padding: .25rem $container-outer-margin;
+		border: none;
+	}
+
+	th {
+		padding: 1rem 1.5rem;
+		text-align: left;
+		background-color: $brand-primary;
+		color: #fff;
 	}
 
 }

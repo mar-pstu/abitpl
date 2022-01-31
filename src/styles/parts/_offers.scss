@@ -21,21 +21,28 @@
 
 	.tabs .heading a {
 		@extend %lead;
-		padding: 1rem 2rem;
+		padding: .5rem 1rem;
 		position: relative;
 		box-sizing: border-box;
 		color: $brand-success;
 		border-radius: $border-radius;
 		background-color: transparentize( $brand-success, .85 );
-		margin: 1rem 0 1rem 1rem;
+		margin: .5rem 0 .5rem .5rem;
+		@include min-width( $screen-md ) {
+			padding: 1rem 2rem;
+			margin: 1rem 0 1rem 1rem;
+		}
 	}
 
 	.tabs .heading a::before {
 		@extend %bgi;
 		content: '';
 		background-color: #fff;
-		margin: -1rem;
+		margin: -0.5rem;
 		z-index: -1;
+		@include min-width( $screen-md ) {
+			margin: -1rem;
+		}
 	}
 
 	.tabs .heading a:first-of-type::before {
@@ -47,7 +54,10 @@
 	}
 
 	.tabs .heading a:last-of-type {
-		margin-right: 1rem;
+		margin-right: .5rem;
+		@include min-width( $screen-md ) {
+			margin-right: 1rem;
+		}
 	}
 
 	.tabs .heading a:hover,
@@ -61,22 +71,30 @@
 	}
 
 	.slider-content {
-		max-width: 60rem;
 		margin-left: auto;
 		margin-right: auto;
+		@include min-width( $screen-md ) {
+			max-width: 60rem;
+		}
 	}
 
 	.slider-content .slick-slide {
-		margin: 2rem 1rem;
+		margin: 1rem .5rem;
+		@include min-width( $screen-md ) {
+			margin: 2rem 1rem;
+		}
 	}
 
 	.entry {
 		border-radius: $border-radius;
 		border: .1rem solid $border-color;
 		background-color: #fff;
-		padding: 0 2.5rem 2.5rem 2.5rem;
+		padding: 0 1.25rem 1.25rem 1.25rem;
 		text-align: center;
 		position: relative;
+		@include min-width( $screen-md ) {
+			padding: 0 2.5rem 2.5rem 2.5rem;
+		}
 	}
 
 	.entry .icon {
@@ -117,15 +135,20 @@
 
 	.entry .description {
 		text-align: initial;
-		padding-left: 2.5rem;
-		padding-right: 2.5rem;
+		@include min-width( $screen-sm ) {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
 	}
 
 	.entry .permalink {
 		@extend %button;
 		@extend %button-success;
 		display: block;
-		margin-top: 2.5rem;
+		margin-top: 1.25rem;
+		@include min-width( $screen-sm ) {
+			margin-top: 2.5rem;
+		}
 	}
 
 }

@@ -1,7 +1,12 @@
 .section {
 
-	@extend %pt-3;
-	@extend %pb-3;
 	position: relative;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+
+	@include min-width( $screen-xl ) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
 
 }

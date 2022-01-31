@@ -5,8 +5,20 @@
 		flex-direction: column;
 		border-radius: 2rem;
 		background-color: transparentize( $brand-success, .85 );
-		padding: 5rem 15em;
+		padding: $container-outer-margin * 2 $container-outer-margin;
 		box-sizing: border-box;
+		@include min-width( $screen-sm ) {
+			padding: 2rem 7.5rem;
+		}
+		@include min-width( $screen-md ) {
+			padding: 3rem 10rem;
+		}
+		@include min-width( $screen-lg ) {
+			padding: 4rem 12.5rem;
+		}
+		@include min-width( $screen-xxl ) {
+			padding: 5rem 15rem;
+		}
 	}
 
 }

@@ -3,12 +3,9 @@
 
 
 mixin widget ( args = {} )
-	-
-		if ( typeof( args.title ) == 'undefined' ) {
-			args.title = 'Заголовок';
-		}
-	.widget.mb-3
-		h3.widget__title.title #{args.title}
+	.widget
+		if args.title
+			h3.widget__title.title #{args.title}
 		if block
 			block
 		else

@@ -6,12 +6,14 @@ $screen-sm:					576px;
 $screen-md:					768px;
 $screen-lg:					992px;
 $screen-xl:					1200px;
-$container-outer-margin:    1.5em;
+$screen-xxl:				1400px;
+$container-outer-margin:    1.5rem;
 $container-breakpoints:
 	xs $screen-sm 540px,
 	sm $screen-md 720px,
 	md $screen-lg 960px,
-	lg $screen-xl 1200px;
+	lg $screen-xl 1200px,
+	xl $screen-xxl 1366px;
 $container-max-width: 1920px;
 
 $screen-nav-hide: $screen-lg;
@@ -19,6 +21,8 @@ $screen-nav-hide: $screen-lg;
 $brand-default:     #05000B;
 $brand-primary:     #4252CF;
 $brand-success:     #FF5A05;
+// $brand-primary:     #0C426F;
+// $brand-success:     #990000;
 $brand-warning:     #FF0000;
 
 $brand-colors:

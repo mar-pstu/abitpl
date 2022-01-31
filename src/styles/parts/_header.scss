@@ -1,10 +1,15 @@
 .header {
 
 	.container {
-		@extend %mt-2;
-		@extend %mb-2;
 		display: flex;
 		align-items: center;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		position: relative;
+		@include min-width( $screen-xxl ) {
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+		}
 	}
 
 	.custom-logo-link + .menu {
@@ -12,18 +17,58 @@
 	}
 
 	.menu {
-		display: flex;
+		display: none;
+		@include min-width( $screen-md ) {
+			display: flex;
+			list-style-type: none;
+			margin-left: 0;
+		}
+	}
+
+	.menu.active {
+		display: block;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 999;
 		list-style-type: none;
-		margin-left: 0;
+		width: 15rem;
+		box-shadow: 0 0 1.5rem rgba( 0, 0, 0, .5 );
+		padding: $container-outer-margin $container-outer-margin / 2 $container-outer-margin / 2 $container-outer-margin / 2;
+		background-color: $brand-success;
+		margin-right: $container-outer-margin;
+		border-radius: $border-radius;
+	}
+
+	.menu.active::before {
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		right: 0;
+		bottom: 100%;
+		border-top: $container-outer-margin / 2 solid transparent;
+		border-left: $container-outer-margin / 2 solid transparent;
+		border-right: $container-outer-margin / 2 solid transparent;
+		border-bottom: $container-outer-margin / 2 solid $brand-success;
+		margin-right: .75rem;
+	}
+
+	.menu.active li {
+		margin-bottom: $container-outer-margin / 2;
 	}
 
 	.menu li {
-		margin: 0 1rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
 	}
 
 	.menu a {
-		@extend %lead;
 		color: #fff;
+		@include min-width( $screen-xxl ) {
+			font-size: 125%;
+		}
 	}
 
 	.menu a:hover,
@@ -46,8 +91,64 @@
 		background-color: #fff;
 	}
 
-	.burger {
+	.menu .sub-menu {
 		display: none;
 	}
+
+	.burger {
+		display: flex;
+		flex-direction: column;
+		width: 3rem;
+		cursor: pointer;
+		margin-left: auto;
+		background-color: transparent;
+		padding: 0;
+		border: none;
+		@include min-width( $screen-md ) {
+			display: none;
+		}
+	}
+
+	.burger .bar {
+		background: #fff;
+		border-radius: $border-radius;
+		height: .25rem;
+		margin: .25rem 0;
+		transition: .4s  cubic-bezier( 0.68, -0.6, 0.32, 1.6 );
+	}
+
+	.burger .bar:nth-of-type( 1 ) {
+		width: 50%;	
+	}
+
+	.burger .bar:nth-of-type( 2 ) {
+		width: 100%;
+	}
+
+	.burger .bar:nth-of-type( 3 ) {
+		width: 75%;
+	 
+	}
+
+	input[type="checkbox"]{
+		display: none;
+	}
+
+	.burger.active .bar:nth-of-type( 1 ) {
+		transform-origin: bottom;
+		transform:rotatez( 45deg ) translate( .25rem, 0 )
+	}
+
+	.burger.active .bar:nth-of-type( 2 ) {
+		transform-origin: top;
+		transform:rotatez( -45deg )
+	}
+
+	.burger.active .bar:nth-of-type( 3 ) {
+		transform-origin: bottom;
+		width: 50%;
+		transform: translate( 1.25rem, -.25rem ) rotatez( 45deg )
+	}
+
 
 }

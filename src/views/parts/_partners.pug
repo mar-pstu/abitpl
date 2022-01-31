@@ -14,7 +14,7 @@ section.section.section--partners.partners#partners
 
 		h2.sr-only Партнёры
 
-		.row
+		.row.slider-content#partners-slider
 
 			+partner( { src: src.userfiles+'fedex.png', title: 'fedex' } )
 			+partner( { src: src.userfiles+'google.png', title: 'google' } )
@@ -23,3 +23,7 @@ section.section.section--partners.partners#partners
 			+partner( { src: src.userfiles+'amazon.png', title: 'amazon' } )
 			+partner( { src: src.userfiles+'fedx.png', title: 'fedx' } )
 			+partner( { src: src.userfiles+'walmart.png', title: 'walmart' } )
+
+		.d-flex.center
+			button.slider-arrow.prev#partners-slider-next #[span.sr-only Предыдущий слайд]
+			button.slider-arrow.next#partners-slider-prev #[span.sr-only Следующий слайд]

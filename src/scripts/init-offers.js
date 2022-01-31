@@ -11,6 +11,15 @@
 			dots: false,
 			prevArrow: '#' + jQuery( slider ).attr( 'id' ) + '-prev',
 			nextArrow: '#' + jQuery( slider ).attr( 'id' ) + '-next',
+			responsive: [
+				{
+					breakpoint: 960,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			],
 		} );
 	}
 

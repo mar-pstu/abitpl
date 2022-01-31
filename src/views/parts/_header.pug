@@ -5,11 +5,15 @@
 	
 	include _logo
 
-	ul.menu
+	ul.menu#menu
 		li.current-menu-item: a( href='home.html' ) Home
 		li: a( href='singular.html' ) About
 		li: a( href='archive.html' ) Contact
 		li: a( href='404.html' ) Testimonial
 		li: a( href='404.html' ) Priceing
 
-	include _burger
+	button#burger.burger
+		span.bar.bar1
+		span.bar.bar2
+		span.bar.bar3
+		span.sr-only Меню

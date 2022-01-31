@@ -1,19 +1,19 @@
 ( function () {
 
-	var $mobilenav = jQuery( '#mobilenav' );
-	var $body = jQuery( 'body' );
+	let $menu = jQuery( '#menu' );
+	let $burger = jQuery( '#burger' );
 
 	function Toggle( event ) {
 		event.preventDefault();
-		if ( $mobilenav.hasClass( 'active' ) ) {
-			$body.css( 'overflow', 'auto' );
-			$mobilenav.removeClass( 'active' );
+		if ( $burger.hasClass( 'active' ) ) {
+			$menu.removeClass( 'active' );
+			$burger.removeClass( 'active' );
 		} else {
-			$body.css( 'overflow', 'hidden' );
-			$mobilenav.addClass( 'active' );
+			$menu.addClass( 'active' );
+			$burger.addClass( 'active' );
 		}
 	}
 
-	$body.on( 'click', '[data-mobilenav=toggle]', Toggle );
+	$burger.on( 'click', Toggle );
 
 } )();

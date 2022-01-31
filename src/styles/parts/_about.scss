@@ -9,12 +9,18 @@
 
 	.row {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
+		@include min-width( $screen-md ) {
+			flex-direction: row;
+		}
 	}
 
 	.col {
-		width: 50%;
+		width: 100%;
+		@include min-width( $screen-md ) {
+			width: 50%;
+		}
 	}
 
 	.content {
@@ -25,6 +31,10 @@
 
 	.thumbnail {
 		@extend %first;
+		margin-bottom: $container-outer-margin;
+		@include min-width( $screen-md ) {
+			margin-bottom: 0;
+		}
 	}
 
 	.thumbnail img {
