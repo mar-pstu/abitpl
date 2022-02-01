@@ -8,7 +8,7 @@ mixin review( args )
 		h3 #{args.title}
 		.meta
 			p.excerpt #{args.excerpt}
-			.assessment.ml-auto.lead
+			.assessment.ml-auto
 				span.sr-only Оценка #{args.assessment}
 				span.stars( style='width: ' + args.assessment + 'em;' )
 
@@ -24,13 +24,13 @@ section.section.section--reviews.reviews#reviews
 
 		.row
 
-			.col.pt-3
+			.col
 				p.h3 What People Say About Us
 				.slider-content.mt-2
-					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
-					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
-					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
-					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '1' } )
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '2' } )
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '3' } )
+					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '4' } )
 					+review( { title: 'Davit millar', excerpt: 'CEO, PParkivew int, Ltd', assessment: '5' } )
 				.d-flex.center.mt-1
 						button.slider-arrow.prev#reviews-next #[span.sr-only Предыдущий слайд]

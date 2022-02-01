@@ -141,7 +141,7 @@ img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
 }
 
 .flex-row {
-	font-display: row;
+	flex-direction: row;
 }
 
 .flex-column {

@@ -2,14 +2,37 @@
 
 	.row {
 		@extend %mt-2;
+		flex-direction: column;
+		@include min-width( $screen-md ) {
+			flex-direction: row;
+		}
 	}
 
 	.col:first-of-type {
-		width: 60%;
+		width: 100%;
+		padding-top: $container-outer-margin;
+		@include min-width( $screen-md ) {
+			width: 60%;
+			padding-top: $container-outer-margin * 3;
+		}
 	}
 
 	.col:last-of-type {
-		width: 40%;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		order: -1;
+		@include min-width( $screen-md ) {
+			width: 40%;
+			order: initial;
+		}
+	}
+
+	.h3 {
+		text-align: center;
+		@include min-width( $screen-md ) {
+			text-align: left;
+		}
 	}
 
 	.thumbnail {
@@ -27,9 +50,17 @@
 		right: 0;
 		background-color: $brand-primary;
 		border-radius: 50% 50% 50% 0;
-		width: 8rem;
-		height: 8rem;
+		width: 4rem;
+		height: 4rem;
 		background-size: 50%;
+		@include min-width( $screen-md ) {
+			width: 6rem;
+			height: 6rem;
+		}
+		@include min-width( $screen-lg ) {
+			width: 8rem;
+			height: 8rem;
+		}
 	}
 
 	.thumbnail img {
@@ -38,8 +69,10 @@
 
 	.slider-content {
 		position: relative;
-		width: 110%;
 		z-index: 999;
+		@include min-width( $screen-md ) {
+			width: 110%;
+		}
 	}
 
 	.slider-content .slick-slide {
@@ -48,8 +81,11 @@
 
 	.entry {
 		background-color: #fff;
-		padding: $container-outer-margin;
+		padding: $container-outer-margin / 4 $container-outer-margin / 2;
 		border: .1rem solid $border-color;
+		@include min-width( $screen-md ) {
+			padding: $container-outer-margin;
+		}
 	}
 
 	.entry .meta {
@@ -63,19 +99,31 @@
 	}
 
 	.entry .assessment {
-		@extend %icon-star;
 		@extend %lead;
 		position: relative;
 		height: 1em;
 		width: 5em;
+	}
+
+	.entry .assessment::before {
+		@extend %bgi;
+		@extend %icon-star;
+		content: '';
 		background-repeat: repeat-x;
+		background-size: contain;
+		opacity: .25;
 		background-size: contain;
 	}
 
 	.entry .assessment .stars {
 		@extend %icon-star;
-		@extend %bgi-contain;
 		background-repeat: repeat-x;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background-size: contain;
 	}
 
 }
