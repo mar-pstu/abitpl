@@ -1,0 +1,42 @@
+.customize-control-gallery .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.customize-control-gallery .container img {
+  width: calc( 25% - .5rem);
+  height: auto;
+  margin: .25rem;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  -o-transition: transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  cursor: move;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-box-sizing: margin-box;
+          box-sizing: margin-box; }
+
+.customize-control-gallery .choice {
+  display: block;
+  border: .1rem solid #d2d2d2;
+  padding: .5rem;
+  text-align: center;
+  width: 100%;
+  cursor: pointer; }
+
+/*# sourceMappingURL=control-gallery.css.map */
